@@ -1,0 +1,240 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 15px;
+    background-color: rgba(189, 189, 189, 1);
+}
+
+.title {
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+    border: 1px solid rgba(237, 237, 237, 1);
+    background-color: rgba(237, 237, 237, 1);
+    box-shadow: 0px 10px 10px rgba(121, 121, 121, 1);
+}
+
+.title:hover {
+    box-shadow: 0px 10px 15px rgba(121, 121, 121, 1);
+    transition: 0.5s;
+}
+
+.constant__item:hover {
+    opacity: 0.9;
+
+}
+
+.constant__item:hover .cake {
+    font-size: 20px;
+    transition: 2s;
+}
+
+.constant__list {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.constant__item {
+    margin-top: 15px;
+    padding: 30px;
+    border: 1px solid rgba(237, 237, 237, 1);
+    background-color: rgba(237, 237, 237, 1);
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cake {
+    font-weight: 700;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.block {
+    margin-top: 20px;
+}
+
+.form__input {
+    font-family: sans-serif;
+    padding: 20px;
+    border: none;
+    background-color: white;
+    border-right: 1px solid black;
+    width: 50%;
+    font-size: 16px;
+}
+
+.form__input:hover {
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.form__input:active {
+    opacity: 0.5;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.form__button {
+    border: none;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 0 20px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+}
+
+.form__button:hover {
+    color: white;
+    background-color: black;
+    transition: 1s;
+}
+
+.boxConstant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.nameConstant:hover {
+    box-shadow: 0px 10px 20px rgba(121, 121, 121, 1);
+    opacity: 0.8;
+}
+
+.nameConstant {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    align-self: flex-end;
+    font-weight: 700;
+    font-size: 20px;
+    box-shadow: 0px 10px 10px rgba(121, 121, 121, 1);
+    margin-top: 15px;
+    background-color: white;
+    padding: 30px;
+}
+
+.valueConstant {
+    align-self: flex-end;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.nameIndex {
+    font-size: 18px;
+    align-self: flex-end;
+    font-weight: 400;
+    display: flex;
+}
+
+.box__titleHeight {
+    padding: 30px;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 22px;
+    background-color: white;
+    margin-top: 15px;
+}
+
+.box__titleHeight:hover {
+    opacity: 0.8;
+}
+
+.amount {
+    margin-top: auto;
+    margin-left: 5px;
+}
+
+.el {
+    margin-bottom: auto;
+}
+
+/* Кнопка стрелки вверх */
+.btn-up {
+    /* фиксированное позиционирование */
+    position: fixed;
+    /* цвет фона */
+    background-color: rgba(38, 36, 36, 1);
+    /* расстояние от правого края окна браузера */
+    right: 20px;
+    /* расстояние от нижнего края окна браузера */
+    bottom: 0;
+    /* скругление верхнего левого угла */
+    border-top-left-radius: 8px;
+    /* скругление верхнего правого угла */
+    border-top-right-radius: 8px;
+    /* вид курсора */
+    cursor: pointer;
+    /* отображение элемента как flex */
+    display: flex;
+    /* выравниваем элементы внутри элемента по центру вдоль поперечной оси */
+    align-items: center;
+    /* выравниваем элементы внутри элемента по центру вдоль главной оси */
+    justify-content: center;
+    /* ширина элемента */
+    width: 60px;
+    /* высота элемента */
+    height: 50px;
+}
+
+.btn-up::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+    display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .btn-up:hover {
+        background-color: rgba(38, 36, 36, 1);
+        /* цвет заднего фона при наведении */
+    }
+}
+
+#myChart {
+    background-color: rgba(237, 237, 237, 1);
+    margin: 40px 300px;
+}
+
+/* Стилизация графиков */
+
+.button__charts {
+    font-family: sans-serif;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 500px;
+    height: 70px;
+    font-size: 20px;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    background-color:  #ffffff;
+        width: 800px !important;
+        height: 800px !important;
+}
+
+.hidden {
+    display: none;
+}

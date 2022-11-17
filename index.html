@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Вычисление полетов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2 class="title">Вычисление характеристик атмосферы в диапозоне геопотенциалных высот от -2000 до 94000 м</h2>
+    <section class="constant">
+        <ul class="constant__list">
+            <li class="constant__item">Давление воздуха на среднем уровне моря:<div class="cake">Pc = 101325,0 Па</div>
+            </li>
+            <li class="constant__item">Кинетическая<br>температура:<div class="cake"> Tc = 288,15 K</div>
+            </li>
+            <li class="constant__item">Ускорение свободного<br>падения:<div class="cake">g = 9,80665 м/c<sup>2</sup>
+                </div>
+            </li>
+            <li class="constant__item">Показатель<br>адиабаты:<div class="cake">x = Cp/Cv = 1,4</div>
+            </li>
+            <li class="constant__item">Удельная газовая<br>постоянная:<div class="cake">R = 287,05287 <br>Дж ·
+                    кг<sup>-1</sup>· К<sup>-1</sup></div>
+            </li>
+            <li class="constant__item">Эмпирический коэффициент Сатерленда:<div class="cake">S = 110,4 K</div>
+            </li>
+            <li class="constant__item">Эмпирический коэффициент Сатерленда:<div class="cake">Bs = 1,458 ·
+                    10<sup>-6</sup><br> кг · с<sup>-1</sup> · м<sup>-1</sup> · К <sup>-1/2</sup></div>
+            </li>
+            <li class="constant__item">Условный радиус<br>Земли:<div class="cake">r = 6356767 м</div>
+            </li>
+        </ul>
+    </section>
+    <section class="block">
+        <form class="form" action="http://127.0.0.1:5500/index.html" method="post">
+            <input class="form__input" type="text" aria-label="Ваше сообщение" placeholder="Введите значение высоты"
+                required>
+            <button class="form__button" type="submit">Отправить</button>
+        </form>
+        
+        <div class="block__value_1">
+            
+        </div>
+        <!-- Кнопка отображения графиков -->
+        <button class="button__charts form__button" type="button">Отобразить графики</button>
+    
+    </section>
+    <div class="btn-up btn-up_hide"></div>
+    <canvas id="myChartFirst" class="hidden" width="400" height="400"></canvas>
+    <canvas id="myChartSecond" class="hidden" width="400" height="400"></canvas>
+    <canvas id="myChartThird" class="hidden" width="400" height="400"></canvas>
+    <canvas id="myChartFourth" class="hidden" width="400" height="400"></canvas>
+    <canvas id="myChartFifth" class="hidden" width="400" height="400"></canvas>
+    <canvas id="myChartSixth" class="hidden" width="400" height="400"></canvas>
+
+    <template id="template">
+        <div class="boxConstant" tabindex="0">
+            <div class="box__titleHeight">Высота :  <span class="titleHeight"></span></div>
+            <div class="nameConstant">Геопотенциальная высота :
+                <span class="valueConstant">...</span>
+                <div class="nameIndex"><div class="boxValue">· 10<sup><span class="valueIndex"></span></sup></div><span class="amount">м</span></div>
+            </div>
+            <div class="nameConstant">Ускорение свободного падения :
+                <span class="valueConstant">...</span>
+                <div class="nameIndex"><span class="amount"> м/c<sup>2</sup></span></div>
+            </div>
+            <div class="nameConstant">Температура :
+                <span class="valueConstant">...</span>
+                <div class="nameIndex"><span class="amount"> · 10<sup>2</sup>  К</span></div>
+            </div>
+            <div class="nameConstant">Давление :
+                <span class="valueConstant">...</span>
+                <div class="nameIndex"><div class="boxValue"> · 10<sup><span class="valueIndex"></span></sup></div><span class="amount">Па</span></div>
+            </div>
+            <div class="nameConstant">Плотность :
+                <span class="valueConstant">...</span>
+                <div class="nameIndex"><div class="boxValue"> · 10<sup>-<span class="valueIndex"></span></sup></div><span class="amount"> кг/м<sup>3</sup></span></div>
+            </div>
+            <div class="nameConstant">Скорость звука :
+                <span class="valueConstant">...</span>
+                <div class="nameIndex"><span class="amount"> · 10<sup>2</sup>  м/c</span></div>
+            </div>
+        </div>
+    </template>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
